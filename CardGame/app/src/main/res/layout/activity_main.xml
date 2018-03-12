@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.georgebrown.game2011.cardgame.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageButton
+        android:id="@+id/image1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toStartOf="@+id/image6"
+        app:layout_constraintStart_toStartOf="@+id/image5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/image6"
+        app:layout_constraintTop_toTopOf="@+id/image1"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toTopOf="@+id/image4"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/image6"
+        app:layout_constraintStart_toEndOf="@+id/image3"
+        app:layout_constraintTop_toTopOf="@+id/image2"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/image9"
+        app:layout_constraintTop_toBottomOf="@+id/image1"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/image10"
+        app:layout_constraintTop_toBottomOf="@+id/image1"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/image4"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/image4"
+        app:layout_constraintTop_toBottomOf="@+id/image4"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/image13"
+        app:layout_constraintTop_toBottomOf="@+id/image5"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/image14"
+        app:layout_constraintTop_toBottomOf="@+id/image5"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/image7"
+        app:layout_constraintTop_toBottomOf="@+id/image8"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/image16"
+        app:layout_constraintTop_toBottomOf="@+id/image8"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image9"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="113dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image13"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image14"
+        app:layout_constraintTop_toTopOf="@+id/image14"
+        app:srcCompat="@drawable/cardback" />
+
+    <ImageButton
+        android:id="@+id/image16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image11"
+        app:layout_constraintTop_toTopOf="@+id/image15"
+        app:srcCompat="@drawable/cardback" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Pick a card, any card!"
+        android:textColor="@android:color/holo_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="score"
+        app:layout_constraintEnd_toEndOf="@+id/image2"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/texttimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="0:0"
+        app:layout_constraintStart_toStartOf="@+id/textscore"
+        app:layout_constraintTop_toBottomOf="@+id/textscore" />
+</android.support.constraint.ConstraintLayout>
