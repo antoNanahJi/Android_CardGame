@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     ImageButton image14;
     ImageButton image15;
     ImageButton image16;
-    boolean pressed =false;
     int Count = 0;
     int Score=0;
     String id_1,id_2;
@@ -125,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Count=0;
+                Score=0;
+                scoreText.setText("Score" + String.valueOf(Score));
                 for(int i=0;i<16;i++)
                 {
                     imageButtons[i].setVisibility(View.VISIBLE);
@@ -155,10 +156,7 @@ public class MainActivity extends AppCompatActivity {
         image1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    pressed = true;
-                    if (pressed) {
-                        Count++;
-                    }
+                    Count++;
                     if (Count <= 2) {
                         image1.setImageResource(myImages[outCome[0]]);
                         image1.setTag(String.valueOf(myImages[outCome[0]]));
@@ -171,11 +169,7 @@ public class MainActivity extends AppCompatActivity {
         image2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image2.setImageResource(myImages[outCome[1]]);
@@ -191,11 +185,7 @@ public class MainActivity extends AppCompatActivity {
         image3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image3.setImageResource(myImages[outCome[2]]);
@@ -212,11 +202,7 @@ public class MainActivity extends AppCompatActivity {
         image4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image4.setImageResource(myImages[outCome[3]]);
@@ -233,11 +219,7 @@ public class MainActivity extends AppCompatActivity {
         image5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image5.setImageResource(myImages[outCome[4]]);
@@ -253,11 +235,7 @@ public class MainActivity extends AppCompatActivity {
         image6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image6.setImageResource(myImages[outCome[5]]);
@@ -273,11 +251,7 @@ public class MainActivity extends AppCompatActivity {
         image7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image7.setImageResource(myImages[outCome[6]]);
@@ -293,11 +267,7 @@ public class MainActivity extends AppCompatActivity {
         image8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image8.setImageResource(myImages[outCome[7]]);
@@ -313,11 +283,7 @@ public class MainActivity extends AppCompatActivity {
         image9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image9.setImageResource(myImages[outCome[8]]);
@@ -333,11 +299,7 @@ public class MainActivity extends AppCompatActivity {
         image10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image10.setImageResource(myImages[outCome[9]]);
@@ -353,11 +315,7 @@ public class MainActivity extends AppCompatActivity {
         image11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image11.setImageResource(myImages[outCome[10]]);
@@ -373,11 +331,7 @@ public class MainActivity extends AppCompatActivity {
         image12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image12.setImageResource(myImages[outCome[11]]);
@@ -393,11 +347,7 @@ public class MainActivity extends AppCompatActivity {
         image13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image13.setImageResource(myImages[outCome[12]]);
@@ -413,11 +363,7 @@ public class MainActivity extends AppCompatActivity {
         image14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image14.setImageResource(myImages[outCome[13]]);
@@ -433,11 +379,7 @@ public class MainActivity extends AppCompatActivity {
         image15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image15.setImageResource(myImages[outCome[14]]);
@@ -453,11 +395,7 @@ public class MainActivity extends AppCompatActivity {
         image16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed=true;
-                if(pressed)
-                {
-                    Count++;
-                }
+                Count++;
                 if(Count<=2)
                 {
                     image16.setImageResource(myImages[outCome[15]]);
@@ -474,39 +412,47 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-void checkID(ImageButton id,int count)
-{
-
-
-if(count==1) {
-    id1 = id;
-    id_1=(String)id.getTag();
-}
-if(count==2) {
-    id2 = id;
-    id_2=(String) id.getTag();
-
-}
-    if(id1!=null&&id2!=null) {
-        pressed=false;
-        if (id_1.equals(id_2)) {
-            Score++;
-            scoreText.setText("Score"+String.valueOf(Score));
-            Count=0;
-            id1.setVisibility(View.INVISIBLE);
-            id2.setVisibility(View.INVISIBLE);
-        } else{
-           Count=0;
-           id1.setImageResource(backImage);
-           id2.setImageResource(backImage);
+    void checkID(ImageButton id,int count)
+    {
+        if(count==1)
+        {
+            id1 = id;
+            id_1=(String)id.getTag();
         }
-
-        id1=null;
-        id2=null;
-        id_1=null;
-        id_2=null;
+        if(count==2)
+        {
+            id2 = id;
+            id_2 = (String) id.getTag();
+        }
+        if(id1!=null&&id2!=null)
+        {
+            if(id1.getId()!=id2.getId())
+            {
+                if (id_1.equals(id_2))
+                {
+                    Score++;
+                    scoreText.setText("Score" + String.valueOf(Score));
+                    Count = 0;
+                    id1.setVisibility(View.INVISIBLE);
+                    id2.setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+                    Count = 0;
+                    id1.setImageResource(backImage);
+                    id2.setImageResource(backImage);
+                }
+                id1 = null;
+                id2 = null;
+                id_1 = null;
+                id_2 = null;
+            }
+            else
+            {
+                Count=1;
+                id2=null;
+                id_2=null;
+            }
+        }
     }
-
-}
-
 }
