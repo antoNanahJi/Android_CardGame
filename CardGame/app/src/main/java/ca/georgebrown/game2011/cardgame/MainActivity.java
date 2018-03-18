@@ -22,6 +22,7 @@ import javax.crypto.NullCipher;
 //Anto Nanah Ji 1011103788
 //Logan King 101100360
 //12/03/2018
+//CardGame
 
 public class MainActivity extends AppCompatActivity {
 
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         scoreText.setText(String.valueOf(Score));
 
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(30000, 1000) { //Timer that displays 30 seconds to the user on finish game over.
 
             public void onTick(long millisUntilFinished) {
                 timerText.setText("0 : " + millisUntilFinished / 1000);
@@ -103,17 +104,17 @@ public class MainActivity extends AppCompatActivity {
                 restartGame();
             }
         }.start();
-        for(int i=0;i<16;i+=2)
+        for(int i=0;i<16;i+=2) //Loop that selects random cards from the deck of 52
         {
-            int r=(int) Math.floor((Math.random()*52));//Generating nrand number
-            outCome[i]=r;
+            int r=(int) Math.floor((Math.random()*52));//Generating rand number representing cards
+            outCome[i]=r;                              //Populates outcome array
             outCome[i+1]=r;
         }
-        for(int i=0;i<16;i++)
+        for(int i=0;i<16;i++) //Loop that randomly selects where the cards are placed
         {
             rand1 = (int) Math.floor((Math.random() * 8)); //Generating nrand number
 
-            rand2 = (int) Math.floor((Math.random() * 8) + 8);//Generating nrand number
+            rand2 = (int) Math.floor((Math.random() * 8) + 8);  //Generating nrand number
 
             int r=outCome[rand1];
             outCome[rand1]=outCome[rand2];
@@ -123,13 +124,13 @@ public class MainActivity extends AppCompatActivity {
 
         image1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    Count++;
-                    textV.setText("Now pick another card...");
-                    if (Count <= 2) {
+                public void onClick(View v) {                      //when you press a card it does this
+                    Count++;                                   //Count is upped by 1
+                    textV.setText("Now pick another card..."); //displays txt to player
+                    if (Count <= 2) {                          //if count is less then 2 count being cards selected do this
                         image1.setImageResource(myImages[outCome[0]]);
                         image1.setTag(String.valueOf(myImages[outCome[0]]));
-                        new android.os.Handler().postDelayed(
+                        new android.os.Handler().postDelayed(  //adds a delay before cards flip back over
                                 new Runnable() {
                                     public void run() {
                                         checkID(image1, Count);
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                                 },
                                 500);
                     } else if (Count > 2) {
-                        Count = 1;
+                        Count = 1; //Sets count back
                     }
                 }
             });
@@ -492,36 +493,36 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    void checkID(ImageButton id,int count)
+    void checkID(ImageButton id,int count) //compares ID's of buttons to find match
     {
-        if(count==1)
+        if(count==1)   //First card selected
         {
             id1 = id;
             id_1=(String)id.getTag();
         }
-        if(count==2)
+        if(count==2)  //Second card selected
         {
             id2 = id;
             id_2 = (String) id.getTag();
         }
-        if(id1!=null&&id2!=null)
+        if(id1!=null&&id2!=null)         //id1 not null & id2 not null
         {
-            if(id1.getId()!=id2.getId())
+            if(id1.getId()!=id2.getId()) //if Ids don't match
             {
-                if (id_1.equals(id_2))
+                if (id_1.equals(id_2))   //if Id's do match
                 {
-                    Score++;
-                    scoreText.setText("Score" + String.valueOf(Score));
-                    Count = 0;
-                    textV.setText("Right!! Pick a card...");
+                    Score++;             //Adds to score
+                    scoreText.setText("Score" + String.valueOf(Score)); //Shows score to player
+                    Count = 0;           //Sets Count back to 0
+                    textV.setText("Right!! Pick a card..."); //Asks to pick card
                     id1.setVisibility(View.INVISIBLE);
                     id2.setVisibility(View.INVISIBLE);
                 }
-                else
+                else                    //If wrong
                 {
                     Count = 0;
                     textV.setText("Wrong! Pick again...");
-                    id1.setImageResource(backImage);
+                    id1.setImageResource(backImage); //Flips card back over
                     id2.setImageResource(backImage);
                 }
                 id1 = null;
@@ -529,7 +530,7 @@ public class MainActivity extends AppCompatActivity {
                 id_1 = null;
                 id_2 = null;
             }
-            else
+            else                                    //Resets
             {
                 Count=0;
                 id1.setImageResource(backImage);
@@ -541,7 +542,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    void restartGame()
+    void restartGame()                           //Restarts game
     {
         AlertDialog.Builder restart= new AlertDialog.Builder(this);
         restart.setTitle("You Lose!!!");
